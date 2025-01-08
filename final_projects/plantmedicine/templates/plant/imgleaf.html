@@ -1,0 +1,1162 @@
+<html>
+	<head>
+		<title> Image Model with upload</title>
+        <style>
+            body {
+                /* padding: 0;
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: flex-end; 
+                align-items: center; */
+                background-color: #e0e1e6;
+                /* background-image: url(https://wallpaperaccess.com/full/1261332.jpg); */
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+            }
+        </style>
+	</head>
+	<body>
+        <a href="http://127.0.0.1:8000/dashboard/">Dashboard</a>
+		<img id="imagePreview" style="height: 300px;" />
+		<input id="imageUpload" type="file" />
+        
+        <div id="answer"></div>
+        <div id="suggestions"></div>
+		<div id="label-container"></div>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+		<script type="text/javascript">
+
+			const URL = 'https://teachablemachine.withgoogle.com/models/gGeKaymE3/';
+
+			let model, labelContainer, maxPredictions;
+
+			// Load the image model 
+			async function init() {
+				const modelURL = URL + 'model.json';
+				const metadataURL = URL + 'metadata.json';
+
+				// load the model and metadata
+				model = await tmImage.load(modelURL, metadataURL);
+				maxPredictions = model.getTotalClasses();
+
+				labelContainer = document.getElementById('label-container');
+				for (let i = 0; i < maxPredictions; i++) {
+					// and class labels
+					labelContainer.appendChild(document.createElement('div'));
+				}
+			}
+
+            async function predict() {
+    // predict can take in an image, video, or canvas HTML element
+    var image = document.getElementById('imagePreview');
+    const prediction = await model.predict(image, false);
+
+    // Find the class with the highest probability
+    let maxProbability = 0;
+    let predictedDisease = '';
+    for (let i = 0; i < prediction.length; i++) {
+        if (prediction[i].probability > maxProbability) {
+            maxProbability = prediction[i].probability;
+            predictedDisease = prediction[i].className;
+            console.log(maxProbability)
+        }
+    }
+
+    // Display only the name of the disease with the highest probability
+    const answerDiv = document.getElementById('answer');
+    answerDiv.textContent = predictedDisease;
+
+    // Suggestions based on detected disease
+    const suggestionsDiv = document.getElementById('suggestions');
+    suggestionsDiv.innerHTML = ''; // Clear previous suggestions
+
+    // Add else-if conditions for all disease classes
+    if (predictedDisease === 'Aloevera') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Aloevera</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Anti-inflammatory, Antioxidant, Antibacterial</li>
+            <li><strong>Cures:</strong> Skin Conditions, Digestive Issues</li>
+            <li><strong>Botanical Name:</strong> Aloe vera</li>
+            <li><strong>Recommended Consumption:</strong> Consult a healthcare professional for dosage</li>
+        </ul>
+    </div>
+    `;
+} else if (predictedDisease === 'Amla') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Amla</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antioxidant, Immunity Booster, Rich in Vitamin C</li>
+            <li><strong>Cures:</strong> Respiratory Disorders, Digestive Issues, Skin Problems</li>
+            <li><strong>Botanical Name:</strong> Phyllanthus emblica</li>
+            <li><strong>Recommended Consumption:</strong> Consult a healthcare professional for dosage</li>
+        </ul>
+    </div>
+    `;
+} else if (predictedDisease === 'Amruthaballi') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Amruta Balli</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antidiabetic, Antioxidant, Anti-inflammatory</li>
+            <li><strong>Cures:</strong> Diabetes, Respiratory Disorders, Digestive Issues</li>
+            <li><strong>Botanical Name:</strong> Tinospora cordifolia</li>
+            <li><strong>Recommended Consumption:</strong> Consult a healthcare professional for dosage</li>
+        </ul>
+    </div>
+    `;
+}
+else if (predictedDisease === 'Arali') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Arali</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antimicrobial, Anti-inflammatory, Analgesic</li>
+            <li><strong>Cures:</strong> Respiratory Disorders, Joint Pain, Skin Conditions</li>
+            <li><strong>Botanical Name:</strong> Polyscias fruticosa</li>
+            <li><strong>Recommended Consumption:</strong> Consult a healthcare professional for dosage</li>
+        </ul>
+    </div>
+    `;
+}
+
+else if (predictedDisease === 'Ashoka') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Ashoka</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Uterine Tonic, Anti-inflammatory, Antidiabetic</li>
+            <li><strong>Cures:</strong> Menstrual Disorders, Digestive Issues, Diabetes</li>
+            <li><strong>Botanical Name:</strong> Saraca asoca</li>
+            <li><strong>Recommended Consumption:</strong> Consult a healthcare professional for dosage</li>
+        </ul>
+    </div>
+    `;
+}
+
+else if (predictedDisease === 'Astma_weed') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Astma Weed</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Adaptogenic, Antioxidant, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Stress, Anxiety, Fatigue, Insomnia</li>
+        <li><strong>Botanical Name:</strong> Withania somnifera</li>
+        <li><strong>Recommended Consumption:</strong> Consult a healthcare professional for dosage</li>
+    </ul>
+</div>
+
+    `;
+}
+
+else if (predictedDisease === 'Badipala') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Badipala</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antimicrobial, Antioxidant, Digestive</li>
+        <li><strong>Cures:</strong> Indigestion, Bloating, Common Cold</li>
+        <li><strong>Botanical Name:</strong> Aegle marmelos</li>
+        <li><strong>Recommended Consumption:</strong> Consume 1-2 ripe fruits daily or as recommended by a healthcare professional.</li>
+    </ul>
+</div>
+
+    `;
+}
+
+else if (predictedDisease === 'Balloon_Vine') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Balloon Vine</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Anti-inflammatory, Analgesic, Antioxidant</li>
+        <li><strong>Cures:</strong> Joint pain, Swelling, Skin ailments</li>
+        <li><strong>Botanical Name:</strong> Cardiospermum halicacabum</li>
+        <li><strong>Recommended Consumption:</strong> Apply Balloon Vine oil topically to affected areas or as advised by a healthcare professional.</li>
+    </ul>
+</div>
+
+    `;
+}
+
+else if (predictedDisease === 'Bamboo') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Bamboo</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Anti-inflammatory, Antioxidant, Antimicrobial</li>
+        <li><strong>Cures:</strong> Joint pain, Fever, Respiratory issues</li>
+        <li><strong>Botanical Name:</strong> Bambusoideae (Bamboo family)</li>
+        <li><strong>Recommended Consumption:</strong> Bamboo shoots can be consumed after proper cooking. Consult a healthcare professional for specific medicinal uses.</li>
+    </ul>
+</div>
+
+    `;
+}
+
+
+else if (predictedDisease === 'Beans') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Beans</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Rich in Protein, Fiber, Vitamins, and Minerals</li>
+            <li><strong>Cures:</strong> Improves Digestion, Regulates Blood Sugar Levels, Boosts Heart Health</li>
+            <li><strong>Botanical Name:</strong> Phaseolus vulgaris</li>
+            <li><strong>Recommended Consumption:</strong> Consume cooked beans as part of a balanced diet. Consult a healthcare professional for specific dietary recommendations.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Betel') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Betel Nut</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Stimulant, Carminative, Aphrodisiac</li>
+            <li><strong>Cures:</strong> Digestive Issues, Oral Health Problems</li>
+            <li><strong>Botanical Name:</strong> Areca catechu</li>
+            <li><strong>Recommended Consumption:</strong> Chewing Betel Nut with betel leaf is a traditional practice. However, it's important to note that excessive consumption may have adverse health effects. Consult a healthcare professional for dosage and advice.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Bhrami') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Brahmi</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Memory Enhancer, Brain Tonic, Adaptogenic</li>
+            <li><strong>Cures:</strong> Improves Cognitive Function, Reduces Anxiety, Alleviates Stress</li>
+            <li><strong>Botanical Name:</strong> Bacopa monnieri</li>
+            <li><strong>Recommended Consumption:</strong> Brahmi can be consumed as an herbal supplement or in the form of Brahmi tea. Consult a healthcare professional for proper dosage and advice.</li>
+        </ul>
+    </div>
+    `;
+}
+
+else if (predictedDisease === 'Bringaraja') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Bringaraja</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Hair Growth Stimulant, Liver Tonic, Anti-inflammatory</li>
+            <li><strong>Cures:</strong> Hair Loss, Liver Disorders, Skin Inflammation</li>
+            <li><strong>Botanical Name:</strong> Eclipta prostrata</li>
+            <li><strong>Recommended Consumption:</strong> Bringaraja can be consumed in the form of Bringaraja powder, capsules, or as a hair oil. Consult a healthcare professional for proper dosage and advice.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'camphor') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Camphor</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Analgesic, Antimicrobial, Decongestant</li>
+            <li><strong>Cures:</strong> Relieves Pain, Clears Respiratory Congestion, Repels Insects</li>
+            <li><strong>Botanical Name:</strong> Cinnamomum camphora</li>
+            <li><strong>Recommended Consumption:</strong> Camphor should be used externally as a topical application or inhaled in small quantities. Consult a healthcare professional for proper usage and dosage, as excessive use can be toxic.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Caricature') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Graptophyllum pictum</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Antimicrobial</li>
+            <li><strong>Cures:</strong> Skin Conditions, Digestive Issues, Respiratory Problems</li>
+            <li><strong>Botanical Name:</strong> Graptophyllum pictum</li>
+            <li><strong>Recommended Consumption:</strong> Graptophyllum pictum leaves can be used in herbal preparations such as teas or as poultices for external application. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+else if (predictedDisease === 'Castor') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Castor</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Laxative, Anti-inflammatory, Antimicrobial</li>
+            <li><strong>Cures:</strong> Constipation, Skin Inflammation, Wound Healing</li>
+            <li><strong>Botanical Name:</strong> Ricinus communis</li>
+            <li><strong>Recommended Consumption:</strong> Castor oil, derived from the seeds of Ricinus communis, is used externally for various skin conditions and internally as a laxative. However, it should be used with caution and under the guidance of a healthcare professional due to its potential side effects. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}else if (predictedDisease === 'Citron lime (herelikai)') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Citron Lime (Herelikai)</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Rich in Vitamin C, Antioxidant, Digestive Aid</li>
+            <li><strong>Cures:</strong> Boosts Immunity, Aids Digestion, Prevents Scurvy</li>
+            <li><strong>Botanical Name:</strong> Citrus medica</li>
+            <li><strong>Recommended Consumption:</strong> Citron lime (herelikai) can be consumed by squeezing its juice or using its zest in various culinary dishes. It can also be used in herbal remedies or as a natural flavoring agent. Consult a healthcare professional for specific medicinal uses and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Coffee') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Coffee</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Stimulant, Antioxidant, Mood Enhancer</li>
+            <li><strong>Cures:</strong> Boosts Energy, Improves Mental Alertness, Enhances Mood</li>
+            <li><strong>Botanical Name:</strong> Coffea arabica (Arabica Coffee) or Coffea canephora (Robusta Coffee)</li>
+            <li><strong>Recommended Consumption:</strong> Coffee is consumed as a beverage brewed from roasted coffee beans. Moderate consumption is generally considered safe for most people, but excessive intake can lead to adverse health effects such as insomnia and increased heart rate. Consult a healthcare professional for personalized advice on coffee consumption.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Common rue(naagdalli)') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Common Rue (Naagdalli)</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Digestive Aid, Antispasmodic, Antioxidant</li>
+            <li><strong>Cures:</strong> Digestive Disorders, Menstrual Cramps, Respiratory Problems</li>
+            <li><strong>Botanical Name:</strong> Ruta graveolens</li>
+            <li><strong>Recommended Consumption:</strong> Common Rue (Naagdalli) leaves can be used in culinary dishes or consumed as herbal tea. However, it's important to note that Common Rue contains compounds that may be toxic in large doses. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Coriender') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Coriander</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Digestive, Antioxidant, Anti-inflammatory</li>
+            <li><strong>Cures:</strong> Improves Digestion, Lowers Blood Sugar, Relieves Pain</li>
+            <li><strong>Botanical Name:</strong> Coriandrum sativum</li>
+            <li><strong>Recommended Consumption:</strong> Coriander seeds and leaves are commonly used as culinary spices. They can also be consumed in the form of herbal teas or as supplements. Consult a healthcare professional for specific medicinal uses and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Curry') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Curry Plant</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Digestive Aid, Antioxidant, Anti-inflammatory</li>
+            <li><strong>Cures:</strong> Improves Digestion, Relieves Nausea, Anti-inflammatory effects</li>
+            <li><strong>Botanical Name:</strong> Murraya koenigii</li>
+            <li><strong>Recommended Consumption:</strong> Curry leaves are commonly used in cooking for flavoring. They can also be consumed as an herbal tea or added to various dishes for their health benefits. Consult a healthcare professional for specific medicinal uses and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Doddpathre') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Doddpathre</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antimicrobial, Anti-inflammatory, Analgesic</li>
+            <li><strong>Cures:</strong> Skin Infections, Pain Relief, Inflammation</li>
+            <li><strong>Botanical Name:</strong> Tridax procumbens</li>
+            <li><strong>Recommended Consumption:</strong> Doddpathre leaves can be used topically as poultices for treating wounds, skin infections, and inflammation. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Drumstick') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Drumstick</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Nutrient-rich, Antioxidant, Anti-inflammatory</li>
+            <li><strong>Cures:</strong> Nutritional Deficiencies, Digestive Disorders, Joint Pain</li>
+            <li><strong>Botanical Name:</strong> Moringa oleifera</li>
+            <li><strong>Recommended Consumption:</strong> Drumstick leaves, pods, and flowers are consumed as food and are also used in traditional medicine. They can be added to soups, curries, or salads. Drumstick supplements are also available. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Ekka') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Ekka</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Anti-inflammatory, Analgesic, Antipyretic</li>
+            <li><strong>Cures:</strong> Pain Relief, Fever Reduction</li>
+            <li><strong>Botanical Name:</strong> Vitex negundo</li>
+            <li><strong>Recommended Consumption:</strong> Ekka leaves can be used in herbal preparations such as teas or as poultices for external application. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+else if (predictedDisease === 'Eucalyptus') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Eucalyptus</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Decongestant, Antiseptic, Expectorant</li>
+            <li><strong>Cures:</strong> Respiratory Congestion, Cough, Sinusitis</li>
+            <li><strong>Botanical Name:</strong> Eucalyptus globulus</li>
+            <li><strong>Recommended Consumption:</strong> Eucalyptus leaves can be used to make herbal teas or inhaled as steam for respiratory relief. Eucalyptus oil is also used topically for its therapeutic effects. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}else if (predictedDisease === 'Ganigale') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Ganigale</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antioxidant, Antimicrobial, Digestive Aid</li>
+            <li><strong>Cures:</strong> Boosts Immunity, Digestive Disorders</li>
+            <li><strong>Botanical Name:</strong> Trigonella foenum-graecum</li>
+            <li><strong>Recommended Consumption:</strong> Ganigale seeds can be used in cooking or consumed after soaking in water. Ganigale leaves are also used in culinary dishes. Consult a healthcare professional for specific medicinal uses and dosage.</li>
+        </ul>
+    </div>
+    `;
+}else if (predictedDisease === 'Ganike') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Ganike</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Anti-inflammatory, Antimicrobial, Antioxidant</li>
+            <li><strong>Cures:</strong> Digestive Disorders, Respiratory Problems</li>
+            <li><strong>Botanical Name:</strong> Peltophorum pterocarpum</li>
+            <li><strong>Recommended Consumption:</strong> Ganike leaves can be used in herbal preparations or as a culinary ingredient. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+else if (predictedDisease === 'Gasagase') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Mint</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Digestive Aid, Antimicrobial, Antioxidant</li>
+            <li><strong>Cures:</strong> Indigestion, Bad Breath</li>
+            <li><strong>Botanical Name:</strong> Mentha</li>
+            <li><strong>Recommended Consumption:</strong> Consult a healthcare professional for dosage</li>
+        </ul>
+    </div>
+    `;
+}
+
+if (predictedDisease === 'Ginger') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Ginger</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Digestive Aid, Anti-inflammatory, Antioxidant</li>
+            <li><strong>Cures:</strong> Nausea, Digestive Disorders, Cold and Flu Symptoms</li>
+            <li><strong>Botanical Name:</strong> Zingiber officinale</li>
+            <li><strong>Recommended Consumption:</strong> Ginger can be consumed fresh, dried, or as a spice in various dishes. It can also be used to make tea or added to herbal remedies. Consult a healthcare professional for specific medicinal uses and dosage.</li>
+        </ul>
+    </div>
+    `;
+} else if (predictedDisease === 'Globe Amarnath') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Globe Amaranth</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Diuretic</li>
+            <li><strong>Cures:</strong> Skin Conditions, Digestive Disorders</li>
+            <li><strong>Botanical Name:</strong> Gomphrena globosa</li>
+            <li><strong>Recommended Consumption:</strong> Globe Amaranth flowers can be used to make tea or added to salads for their decorative and potential health benefits. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+
+if (predictedDisease === 'Guava') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Guava</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Antimicrobial</li>
+            <li><strong>Cures:</strong> Respiratory Disorders, Digestive Issues</li>
+            <li><strong>Botanical Name:</strong> Psidium guajava</li>
+            <li><strong>Recommended Consumption:</strong> Guava fruits can be consumed fresh or used to make juices, jams, or desserts. Consult a healthcare professional for specific medicinal uses and dosage.</li>
+        </ul>
+    </div>
+    `;
+} else if (predictedDisease === 'Henna') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Henna</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Cooling, Antimicrobial, Astringent</li>
+            <li><strong>Cures:</strong> Hair Health, Skin Disorders</li>
+            <li><strong>Botanical Name:</strong> Lawsonia inermis</li>
+            <li><strong>Recommended Consumption:</strong> Henna leaves are ground into a paste and used for temporary tattoos or hair dye. Henna powder can also be used for hair conditioning. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+} else if (predictedDisease === 'Hibiscus') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Hibiscus</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Diuretic</li>
+            <li><strong>Cures:</strong> High Blood Pressure, Hair Health</li>
+            <li><strong>Botanical Name:</strong> Hibiscus rosa-sinensis</li>
+            <li><strong>Recommended Consumption:</strong> Hibiscus flowers can be used to make tea, which is known for its potential health benefits. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+else if (predictedDisease === 'Honge') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Honge</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antimicrobial, Anti-inflammatory, Antioxidant</li>
+            <li><strong>Cures:</strong> Digestive Disorders, Respiratory Problems</li>
+            <li><strong>Botanical Name:</strong> Pongamia pinnata</li>
+            <li><strong>Recommended Consumption:</strong> Honge leaves can be used in herbal preparations or as a culinary ingredient. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+} else if (predictedDisease === 'Insulin') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Insulin Plant</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antidiabetic, Antioxidant, Anti-inflammatory</li>
+            <li><strong>Cures:</strong> Diabetes Management, Antioxidant Benefits</li>
+            <li><strong>Botanical Name:</strong> Costus igneus</li>
+            <li><strong>Recommended Consumption:</strong> Insulin leaves are used in traditional medicine for their potential antidiabetic properties. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+} else if (predictedDisease === 'Jackfruit') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Jackfruit</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Nutrient-rich, Antioxidant, Anti-inflammatory</li>
+            <li><strong>Cures:</strong> Digestive Disorders, Immune Boosting</li>
+            <li><strong>Botanical Name:</strong> Artocarpus heterophyllus</li>
+            <li><strong>Recommended Consumption:</strong> Jackfruit is consumed as a fruit and its seeds are also eaten after cooking. It is rich in vitamins, minerals, and dietary fiber. Consult a healthcare professional for specific medicinal uses and dosage.</li>
+        </ul>
+    </div>
+    `;
+} else if (predictedDisease === 'Jasmine') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Jasmine</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antidepressant, Antiseptic, Antispasmodic</li>
+            <li><strong>Cures:</strong> Anxiety Relief, Skin Health</li>
+            <li><strong>Botanical Name:</strong> Jasminum</li>
+            <li><strong>Recommended Consumption:</strong> Jasmine flowers are often used for their fragrance and are also used in teas and herbal preparations. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+} else if (predictedDisease === 'Kamakasturi') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+        <h2>Kamakasturi</h2>
+        <ul>
+            <li><strong>Medicinal Qualities:</strong> Antioxidant, Antimicrobial, Anti-inflammatory</li>
+            <li><strong>Cures:</strong> Respiratory Disorders, Digestive Disorders</li>
+            <li><strong>Botanical Name:</strong> Ocimum tenuiflorum</li>
+            <li><strong>Recommended Consumption:</strong> Kamakasturi leaves are commonly used in culinary dishes and herbal teas for their potential health benefits. Consult a healthcare professional for proper usage and dosage.</li>
+        </ul>
+    </div>
+    `;
+}
+
+else if (predictedDisease === 'Kambajala' || predictedDisease === 'Kasambruga' || predictedDisease === 'kepala') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Kamakahala</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Anti-inflammatory, Antioxidant, Analgesic</li>
+        <li><strong>Cures:</strong> Used traditionally to treat skin conditions, inflammation, and pain</li>
+        <li><strong>Botanical Name:</strong> Labordia tinifolia</li>
+        <li><strong>Recommended Consumption:</strong> Typically consumed as a tea or applied topically in the form of poultices. Dosage should be determined by a healthcare professional.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Kohlrabi') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Kohlrabi</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> High in vitamin C, fiber, and antioxidants</li>
+        <li><strong>Cures:</strong> Supports digestive health, boosts immune system, promotes healthy skin</li>
+        <li><strong>Botanical Name:</strong> Brassica oleracea var. gongylodes</li>
+        <li><strong>Recommended Consumption:</strong> Can be consumed raw in salads, steamed, roasted, or added to soups and stews. It's versatile and can be enjoyed in various culinary preparations.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Lantana') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Lantana</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antimicrobial, Antioxidant, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Used in traditional medicine to treat respiratory conditions, skin disorders, and digestive issues</li>
+        <li><strong>Botanical Name:</strong> Lantana camara</li>
+        <li><strong>Recommended Consumption:</strong> Lantana is primarily grown as an ornamental plant and caution is advised as it can be toxic if ingested. Consult with a healthcare professional before using it for medicinal purposes.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Lemon') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Lemon</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Antibacterial, Digestive Aid</li>
+        <li><strong>Cures:</strong> Used to relieve sore throat, aid digestion, and promote overall health</li>
+        <li><strong>Botanical Name:</strong> Citrus limon</li>
+        <li><strong>Recommended Consumption:</strong> Lemon juice is commonly consumed by adding it to water or tea. It can also be used in cooking and as a flavor enhancer in various dishes. However, excessive consumption may erode tooth enamel due to its acidic nature. It's advisable to consult with a healthcare professional for personalized recommendations.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Lemongrass') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Lemongrass</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antimicrobial, Digestive Aid, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Lemongrass is traditionally used to alleviate digestive issues such as bloating, indigestion, and stomach cramps. It also possesses antimicrobial properties and may help in reducing inflammation.</li>
+        <li><strong>Botanical Name:</strong> Cymbopogon citratus</li>
+        <li><strong>Recommended Consumption:</strong> Lemongrass can be consumed as a tea, added to soups, curries, or used as a flavoring agent in various dishes. It's advisable to consult with a healthcare professional for personalized recommendations regarding consumption and dosage, especially for therapeutic purposes.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Malabar_Nut') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Malabar Nut</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Expectorant, Antimicrobial, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Malabar Nut, also known as Justicia adhatoda, has been traditionally used in Ayurvedic and Siddha medicine systems for treating respiratory disorders such as asthma, bronchitis, and cough. It acts as an expectorant, helping to clear mucus from the respiratory tract, and possesses antimicrobial and anti-inflammatory properties.</li>
+        <li><strong>Botanical Name:</strong> Justicia adhatoda</li>
+        <li><strong>Recommended Consumption:</strong> Malabar Nut is commonly consumed as a herbal tea or decoction. It's essential to consult with a healthcare professional, especially if using it for therapeutic purposes or if you have any underlying health conditions.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Malabar_Spinach') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Malabar Spinach</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Nutrient-rich, Antioxidant, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Malabar Spinach, also known as Basella alba, is a highly nutritious leafy vegetable. It is rich in vitamins A and C, iron, and calcium. Regular consumption of Malabar Spinach is associated with various health benefits, including antioxidant properties that help protect cells from damage caused by free radicals and anti-inflammatory effects that may reduce the risk of chronic diseases.</li>
+        <li><strong>Botanical Name:</strong> Basella alba</li>
+        <li><strong>Recommended Consumption:</strong> Malabar Spinach can be consumed raw in salads or cooked in various dishes. It's a versatile vegetable that can be added to soups, stir-fries, or used as a substitute for traditional spinach in recipes. Enjoying Malabar Spinach as part of a balanced diet can contribute to overall health and well-being.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Mango') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Mongo</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Nutrient-rich, Antioxidant, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Mongo, also known as Mung Bean (Vigna radiata), is a highly nutritious legume. It is rich in protein, fiber, vitamins, and minerals. Mung beans are associated with various health benefits, including antioxidant properties that help protect cells from damage caused by free radicals and anti-inflammatory effects that may reduce the risk of chronic diseases.</li>
+        <li><strong>Botanical Name:</strong> Vigna radiata</li>
+        <li><strong>Recommended Consumption:</strong> Mung beans can be consumed in various forms, including sprouted, cooked, or ground into flour. They are commonly used in soups, salads, curries, and desserts. Incorporating mung beans into your diet can contribute to overall health and well-being.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Marigold') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Marigold</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Anti-inflammatory, Antimicrobial, Antioxidant</li>
+        <li><strong>Cures:</strong> Marigold (Tagetes spp.) has been traditionally used in herbal medicine for its anti-inflammatory, antimicrobial, and antioxidant properties. It is often applied topically to treat minor skin irritations, wounds, and burns. Additionally, marigold extracts may help reduce inflammation and promote wound healing when used externally.</li>
+        <li><strong>Botanical Name:</strong> Tagetes spp.</li>
+        <li><strong>Recommended Consumption:</strong> Marigold flowers can be used fresh or dried to make teas, infused oils, or topical ointments. Consult with a healthcare professional before using marigold products, especially if you have allergies or sensitive skin.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Mint') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Mint</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Digestive Aid, Antimicrobial, Antioxidant</li>
+        <li><strong>Cures:</strong> Mint (Mentha spp.) is renowned for its digestive properties, aiding in digestion and soothing gastrointestinal issues such as indigestion and gas. It also possesses antimicrobial and antioxidant properties, which may help fight off harmful bacteria and reduce oxidative stress in the body.</li>
+        <li><strong>Botanical Name:</strong> Mentha spp.</li>
+        <li><strong>Recommended Consumption:</strong> Mint leaves can be consumed fresh, dried, or as a tea infusion. It's commonly used in culinary dishes, beverages, and herbal remedies. However, excessive consumption may cause adverse effects, especially for individuals with certain medical conditions. Consult with a healthcare professional for personalized advice.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Neem') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Neem</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antimicrobial, Antifungal, Antioxidant</li>
+        <li><strong>Cures:</strong> Neem (Azadirachta indica) is highly valued for its broad-spectrum antimicrobial and antifungal properties. It's traditionally used to treat various skin disorders, such as acne, eczema, and psoriasis, due to its ability to combat bacteria and fungi. Additionally, neem exhibits antioxidant activity, which may contribute to its overall health benefits.</li>
+        <li><strong>Botanical Name:</strong> Azadirachta indica</li>
+        <li><strong>Recommended Consumption:</strong> Neem can be consumed in various forms, including neem leaves, neem oil, neem capsules, or neem extracts. It's commonly used in herbal remedies, skincare products, and oral hygiene products. However, it's essential to use neem products cautiously and under the guidance of a healthcare professional, as excessive consumption may lead to adverse effects.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Nelavembu') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Nelavembu</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antipyretic, Immunomodulatory, Antioxidant</li>
+        <li><strong>Cures:</strong> Nelavembu (Andrographis paniculata) is renowned for its antipyretic properties, making it a popular remedy for managing fever. It also possesses immunomodulatory effects, which can help enhance the body's immune response to infections. Additionally, nelavembu exhibits antioxidant activity, contributing to its overall health benefits.</li>
+        <li><strong>Botanical Name:</strong> Andrographis paniculata</li>
+        <li><strong>Recommended Consumption:</strong> Nelavembu is typically consumed as a herbal decoction or tea. It's prepared by boiling nelavembu leaves or powder in water and then straining the liquid. This decoction is commonly used during fever episodes and for general immune support. However, it's advisable to consult a healthcare professional for proper dosage and usage instructions.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Nerale') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Nerale</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Digestive Aid</li>
+        <li><strong>Cures:</strong> Nerale (Indian blackberry) is known for its rich antioxidant content, which helps in combating oxidative stress and promoting overall health. It also possesses anti-inflammatory properties, which can aid in reducing inflammation in the body. Additionally, nerale is considered a digestive aid, supporting gastrointestinal health and digestion.</li>
+        <li><strong>Botanical Name:</strong> Syzygium cumini</li>
+        <li><strong>Recommended Consumption:</strong> Nerale berries can be consumed fresh or used in various culinary preparations such as jams, jellies, and desserts. The leaves and bark of the nerale tree are also utilized in traditional medicine for their therapeutic properties. However, it's advisable to consult a healthcare professional for specific dosage and usage instructions.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Nooni') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Nooni</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Digestive Aid</li>
+        <li><strong>Cures:</strong> Nooni, also known as Indian gooseberry or amla, is renowned for its high antioxidant content, which helps boost immunity and combat oxidative stress. It also possesses anti-inflammatory properties and aids in digestion.</li>
+        <li><strong>Botanical Name:</strong> Phyllanthus emblica</li>
+        <li><strong>Recommended Consumption:</strong> Nooni can be consumed fresh, dried, or in the form of juice or supplements. It is commonly used in traditional Ayurvedic medicine for its numerous health benefits. However, it's advisable to consult a healthcare professional for specific dosage and usage instructions.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Onion') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Onion</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Immune Booster</li>
+        <li><strong>Cures:</strong> Onions are rich in antioxidants and anti-inflammatory compounds, which contribute to their various health benefits. They are known to boost immune function and promote overall well-being.</li>
+        <li><strong>Botanical Name:</strong> Allium cepa</li>
+        <li><strong>Recommended Consumption:</strong> Onions can be consumed raw, cooked, or added to various dishes for flavor and nutrition. They are versatile ingredients used in cuisines worldwide.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Padri') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Padri</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Digestive Aid</li>
+        <li><strong>Cures:</strong> Padri, also known as betel leaf, possesses antioxidant properties and aids in digestion. It is commonly chewed with betel nut and other ingredients for its stimulating and medicinal effects.</li>
+        <li><strong>Botanical Name:</strong> Piper betle</li>
+        <li><strong>Recommended Consumption:</strong> Padri leaves are traditionally chewed or used in various culinary and medicinal preparations. However, excessive consumption may have adverse effects, and it's advisable to use them in moderation.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Palak(Spinach)') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Palak (Spinach)</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Nutrient-Rich, Antioxidant, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Palak, or spinach, is packed with nutrients, including vitamins, minerals, and antioxidants. It supports overall health, boosts immunity, and promotes cardiovascular health.</li>
+        <li><strong>Botanical Name:</strong> Spinacia oleracea</li>
+        <li><strong>Recommended Consumption:</strong> Palak can be consumed raw in salads, cooked in various dishes, or blended into smoothies. Regular consumption helps meet dietary requirements and contributes to overall well-being.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Papaya') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Papaya</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Digestive Aid, Antioxidant, Immune Booster</li>
+        <li><strong>Cures:</strong> Papaya is known for its digestive enzymes, antioxidants, and immune-boosting properties. It aids in digestion, supports skin health, and strengthens the immune system.</li>
+        <li><strong>Botanical Name:</strong> Carica papaya</li>
+        <li><strong>Recommended Consumption:</strong> Papaya can be consumed fresh as a fruit, blended into smoothies, or used in salads and desserts. It is a versatile fruit that provides numerous health benefits.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Parijatha') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Parijatha</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Relaxant</li>
+        <li><strong>Cures:</strong> Parijatha, also known as night-flowering jasmine, possesses antioxidant and anti-inflammatory properties. It is traditionally used in Ayurvedic medicine for its calming and relaxing effects.</li>
+        <li><strong>Botanical Name:</strong> Nyctanthes arbor-tristis</li>
+        <li><strong>Recommended Consumption:</strong> Parijatha flowers are used in traditional medicine preparations, aromatic oils, and herbal teas. They are valued for their therapeutic benefits and aromatic fragrance.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Pea') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Pea</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Nutrient-Rich, Antioxidant, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Peas are rich in nutrients, antioxidants, and anti-inflammatory compounds. They support overall health, aid in digestion, and contribute to heart health.</li>
+        <li><strong>Botanical Name:</strong> Pisum sativum</li>
+        <li><strong>Recommended Consumption:</strong> Peas can be consumed fresh, cooked, or added to various dishes such as soups, salads, and stews. They are a versatile and nutritious vegetable.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Pepper') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Pepper</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Digestive Aid, Antimicrobial, Antioxidant</li>
+        <li><strong>Cures:</strong> Pepper, both black and white varieties, possesses digestive aid, antimicrobial, and antioxidant properties. It aids in digestion, boosts metabolism, and supports overall health.</li>
+        <li><strong>Botanical Name:</strong> Piper nigrum</li>
+        <li><strong>Recommended Consumption:</strong> Pepper is used as a spice in various cuisines worldwide. It can be added to dishes during cooking or sprinkled on food before consumption.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Pomoegranate') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Pomegranate</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Heart Health</li>
+        <li><strong>Cures:</strong> Pomegranate is rich in antioxidants and anti-inflammatory compounds, which support heart health, reduce inflammation, and boost overall well-being.</li>
+        <li><strong>Botanical Name:</strong> Punica granatum</li>
+        <li><strong>Recommended Consumption:</strong> Pomegranate seeds can be consumed fresh or added to salads, smoothies, and desserts. The juice is also popular and provides similar health benefits.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Pumpkin') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Pumpkin</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Nutrient-Rich, Antioxidant, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Pumpkin is rich in nutrients, antioxidants, and anti-inflammatory compounds. It supports overall health, boosts immunity, and promotes skin health.</li>
+        <li><strong>Botanical Name:</strong> Cucurbita pepo</li>
+        <li><strong>Recommended Consumption:</strong> Pumpkin can be consumed cooked in various dishes such as soups, stews, and pies. It is a versatile vegetable used in both savory and sweet recipes.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Raddish') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Radish</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Nutrient-Rich, Antioxidant, Detoxifying</li>
+        <li><strong>Cures:</strong> Radish is rich in nutrients, including vitamins, minerals, and antioxidants. It supports digestive health, boosts immunity, and aids in detoxification.</li>
+        <li><strong>Botanical Name:</strong> Raphanus sativus</li>
+        <li><strong>Recommended Consumption:</strong> Radish can be consumed raw in salads, pickled, or cooked in various dishes. It is a versatile vegetable that adds flavor and nutrition to meals.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Rose') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Rose</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Relaxant</li>
+        <li><strong>Cures:</strong> Roses possess antioxidant and anti-inflammatory properties. They are used in traditional medicine and aromatherapy for their calming and relaxing effects.</li>
+        <li><strong>Botanical Name:</strong> Rosa</li>
+        <li><strong>Recommended Consumption:</strong> Rose petals can be used to make herbal teas, aromatic oils, and floral waters. They are valued for their therapeutic benefits and pleasant fragrance.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Sampige') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Sampige</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Aromatic, Relaxant, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Sampige, also known as frangipani or plumeria, is valued for its aromatic flowers and calming properties. It is used in traditional medicine and aromatherapy for its soothing effects.</li>
+        <li><strong>Botanical Name:</strong> Plumeria spp.</li>
+        <li><strong>Recommended Consumption:</strong> Sampige flowers can be used to make aromatic oils, perfumes, and incense. They are treasured for their fragrance and therapeutic benefits.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Sapota') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Sapota</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Nutrient-Rich, Antioxidant, Digestive Aid</li>
+        <li><strong>Cures:</strong> Sapota, also known as chikoo, is rich in nutrients, antioxidants, and dietary fiber. It supports digestive health, boosts immunity, and promotes overall well-being.</li>
+        <li><strong>Botanical Name:</strong> Manilkara zapota</li>
+        <li><strong>Recommended Consumption:</strong> Sapota can be consumed fresh as a fruit or used in milkshakes, smoothies, and desserts. It is a delicious and nutritious fruit enjoyed worldwide.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Seethaashoka') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Seethaashoka</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Uterine Tonic</li>
+        <li><strong>Cures:</strong> Seethaashoka, also known as Saraca indica or Ashoka tree, possesses antioxidant and anti-inflammatory properties. It is used in traditional medicine as a uterine tonic and to promote women's health.</li>
+        <li><strong>Botanical Name:</strong> Saraca indica</li>
+        <li><strong>Recommended Consumption:</strong> Seethaashoka bark and flowers are used in various medicinal preparations, including teas, decoctions, and supplements. It is valued for its therapeutic benefits and health-promoting properties.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Seethapala') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Seethapala</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Nutrient-Rich, Antioxidant, Immune Booster</li>
+        <li><strong>Cures:</strong> Seethapala, also known as custard apple or sugar apple, is rich in nutrients, antioxidants, and immune-boosting compounds. It supports overall health, boosts immunity, and aids in digestion.</li>
+        <li><strong>Botanical Name:</strong> Annona squamosa</li>
+        <li><strong>Recommended Consumption:</strong> Seethapala can be consumed fresh as a fruit or used in milkshakes, smoothies, and desserts. It is a delicious and nutritious fruit enjoyed for its sweet flavor and health benefits.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Spinach1') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Spinach</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Nutrient-Rich, Antioxidant, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Spinach is rich in nutrients, including vitamins, minerals, and antioxidants. It supports overall health, boosts immunity, and reduces inflammation.</li>
+        <li><strong>Botanical Name:</strong> Spinacia oleracea</li>
+        <li><strong>Recommended Consumption:</strong> Spinach can be consumed raw in salads, cooked in various dishes such as soups, curries, and omelets, or blended into smoothies. It is a versatile leafy green vegetable known for its health benefits.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Tamarind') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Tamarind</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Digestive Aid, Antioxidant, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Tamarind is known for its digestive aid, antioxidant, and anti-inflammatory properties. It supports digestive health, boosts immunity, and aids in detoxification.</li>
+        <li><strong>Botanical Name:</strong> Tamarindus indica</li>
+        <li><strong>Recommended Consumption:</strong> Tamarind pulp is used in cooking to add flavor to various dishes such as curries, chutneys, and sauces. It is also consumed as a refreshing drink or used in traditional medicine.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Taro') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Taro</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Nutrient-Rich, Anti-inflammatory, Digestive Aid</li>
+        <li><strong>Cures:</strong> Taro is rich in nutrients and possesses anti-inflammatory and digestive aid properties. It supports digestive health, reduces inflammation, and provides sustained energy.</li>
+        <li><strong>Botanical Name:</strong> Colocasia esculenta</li>
+        <li><strong>Recommended Consumption:</strong> Taro can be cooked in various dishes such as curries, stews, and chips. It is a versatile root vegetable enjoyed for its mild flavor and nutritional benefits.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Tecoma') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Tecoma</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Immune Booster</li>
+        <li><strong>Cures:</strong> Tecoma, also known as trumpet vine or trumpet creeper, possesses antioxidant, anti-inflammatory, and immune-boosting properties. It is used in traditional medicine for its therapeutic benefits.</li>
+        <li><strong>Botanical Name:</strong> Tecoma spp.</li>
+        <li><strong>Recommended Consumption:</strong> Tecoma flowers and leaves are used in various medicinal preparations, including teas, decoctions, and supplements. It is valued for its health-promoting properties and natural remedies.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Tomato') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Tomato</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Heart Health</li>
+        <li><strong>Cures:</strong> Tomato is rich in antioxidants and possesses anti-inflammatory properties. It supports heart health, reduces inflammation, and promotes overall well-being.</li>
+        <li><strong>Botanical Name:</strong> Solanum lycopersicum</li>
+        <li><strong>Recommended Consumption:</strong> Tomatoes can be consumed raw in salads, cooked in various dishes such as soups, sauces, and sandwiches, or juiced for a refreshing beverage. They are a versatile and nutritious fruit enjoyed worldwide.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Tulsi') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Tulsi</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Antimicrobial, Anti-inflammatory</li>
+        <li><strong>Cures:</strong> Tulsi, also known as holy basil, possesses antioxidant, antimicrobial, and anti-inflammatory properties. It is used in traditional medicine for its therapeutic benefits.</li>
+        <li><strong>Botanical Name:</strong> Ocimum tenuiflorum</li>
+        <li><strong>Recommended Consumption:</strong> Tulsi leaves are used fresh or dried in teas, herbal infusions, and medicinal preparations. It is valued for its health-promoting properties and natural remedies.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Turmeric') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Turmeric</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Anti-inflammatory, Antioxidant, Digestive Aid</li>
+        <li><strong>Cures:</strong> Turmeric possesses anti-inflammatory, antioxidant, and digestive aid properties. It supports joint health, boosts immunity, and aids in digestion.</li>
+        <li><strong>Botanical Name:</strong> Curcuma longa</li>
+        <li><strong>Recommended Consumption:</strong> Turmeric can be used fresh or dried in cooking, teas, smoothies, and medicinal preparations. It is a versatile spice known for its vibrant color and health benefits.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Catharanthus') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Catharanthus</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Anticancer, Antidiabetic, Antimicrobial</li>
+        <li><strong>Cures:</strong> Catharanthus, also known as Madagascar periwinkle, possesses anticancer, antidiabetic, and antimicrobial properties. It is used in traditional medicine for its therapeutic benefits.</li>
+        <li><strong>Botanical Name:</strong> Catharanthus roseus</li>
+        <li><strong>Recommended Consumption:</strong> Catharanthus leaves and flowers are used in various medicinal preparations, including teas, decoctions, and supplements. It is valued for its health-promoting properties and natural remedies.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Chakte') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Chakte</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Analgesic</li>
+        <li><strong>Cures:</strong> Chakte, also known as Caesalpinia platyloba, possesses antioxidant, anti-inflammatory, and analgesic properties. It is used in traditional medicine for pain relief and to promote overall well-being.</li>
+        <li><strong>Botanical Name:</strong> Caesalpinia platyloba</li>
+        <li><strong>Recommended Consumption:</strong> Chakte bark and leaves are used in various medicinal preparations, including teas, decoctions, and poultices. It is valued for its health-promoting properties and natural remedies.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Chilly') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Chili</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Antioxidant, Anti-inflammatory, Digestive Aid</li>
+        <li><strong>Cures:</strong> Chili peppers possess antioxidant, anti-inflammatory, and digestive aid properties. They support metabolism, aid digestion, and promote cardiovascular health.</li>
+        <li><strong>Botanical Name:</strong> Capsicum spp.</li>
+        <li><strong>Recommended Consumption:</strong> Chili peppers can be consumed fresh, dried, or powdered and used in various cuisines to add flavor and heat. They are valued for their spicy flavor and health benefits.</li>
+    </ul>
+</div>
+
+    `;
+}else if (predictedDisease === 'Thumbe') {
+    suggestionsDiv.innerHTML = `
+    <div class="plant-info">
+    <h2>Thumbe</h2>
+    <ul>
+        <li><strong>Medicinal Qualities:</strong> Anti-inflammatory, Antimicrobial, Digestive Aid</li>
+        <li><strong>Cures:</strong> Thumbe, also known as Echinops echinatus, possesses anti-inflammatory, antimicrobial, and digestive aid properties. It is used in traditional medicine for its therapeutic benefits.</li>
+        <li><strong>Botanical Name:</strong> Echinops echinatus</li>
+        <li><strong>Recommended Consumption:</strong> Thumbe roots and leaves are used in various medicinal preparations, including teas, decoctions, and poultices. It is valued for its health-promoting properties and natural remedies.</li>
+    </ul>
+</div>
+
+    `;
+}
+
+
+
+    // Continue adding else-if statements for other disease classes
+
+    // For classes with 0.00 probability, add a default recommendation
+    if (maxProbability <= 0.98) {
+        suggestionsDiv.innerHTML = `
+        <div class="low-confidence-message">
+            <p>Plant Analysis was not successful</p>
+        </div>
+        `;
+    }
+}
+
+		</script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+					reader.onload = function (e) {
+						$('#imagePreview').attr('src', e.target.result);
+						// $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+						$('#imagePreview').hide();
+						$('#imagePreview').fadeIn(650);
+					};
+					reader.readAsDataURL(input.files[0]);
+					init().then(() => {
+						predict();
+					});
+				}
+			}
+			$('#imageUpload').change(function () {
+				readURL(this);
+			});
+		</script>
+	</body>
+</html>

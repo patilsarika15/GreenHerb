@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Plant Details{% endblock %}
+{% block index %}{% endblock %}
+{% block content %}
+<div style="margin-left: 10%;">
+    {% if img_address %}
+        <img src="{{img_address}}" alt="">
+    {% endif %}
+<h1>{{ plant_name }}</h1>
+{% if medicinal_qualities %}
+<h2>Medicinal Qualities:</h2>
+<ul>
+    {% for quality in medicinal_qualities %}
+    <li>{{ quality }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No medicinal information available for this plant.</p>
+{% endif %}
+
+
+{% if bt %}
+<h2>Botanical Name:</h2>
+<ul>
+    <li>{{ bt }}</li>
+</ul>
+{% endif %}
+
+
+
+{% if cures %}
+<h2>Cures:</h2>
+<ul>
+    {% for cure in cures %}
+    <li>{{ cure }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No information available about the cures provided by this plant.</p>
+{% endif %}
+
+{% if recommended_consumption %}
+<h2>Recommended Consumption:</h2>
+<p>{{ recommended_consumption }}</p>
+</div>
+{% endif %}
+{% endblock %}

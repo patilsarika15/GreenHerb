@@ -1,0 +1,287 @@
+    {
+        "Aloevera": {
+            "medicinal_qualities": ["anti-inflammatory", "antioxidant", "antibacterial"],
+            "cures": ["skin conditions", "digestive issues"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Aloe vera",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Aloevera/344.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T100735Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=b6206d6c92ea1e8e47067c55fd36896543d3889cdc54043d957ac95fa587d1aadb35da75d6a40bb5101cb5bacf963d31f331539c03e225af2bfa0a88e550928d2743dd49bd075e925fbe70de2ee5e0bb3a5cebd13eb2db75460d546663f0ee86972375b05c2fd9dc09c8a035e43f2f57d4cec08499c72d52d156c8a50bb1d7e490ce60cfd7e22e1134935af01199531f6970d730fb303b237b9a1e3b85495729f84ab8aa16749706f23c46cda70f6cd67ba129242f5b9a5589ca818da201d344bfa7b5e3e442c449299dc0ecb56860f7c457e79102654e591a1e584f4054e75d651b2461fabefbd73dd4a691096a975a5be6d20835c37ac6756041194d3d7ecb"
+        },
+        "Amla": {
+            "medicinal_qualities": ["rich in Vitamin C", "antioxidant", "anti-inflammatory"],
+            "cures": ["boosts immunity", "improves digestion", "reduces cholesterol"],
+            "recommended_consumption": "1-2 fruits daily or as advised by a healthcare professional",
+            "bt": "Phyllanthus emblica",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Amla/1312.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T100712Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=4f59695f15863461a72b8f6c8ea312d168cda4e4876628fbc42158cdaa82ed237f1d388e72b17231372f2039dce239c8930cd3c88379e6f71f2adfc5c973009f179c482ffed9df6e0dffe332ac0d7ec6bbd3b54157ce65b56b1968c933f655f675a4c3eea4da75e9eda0dc6ee520d7eeb8badba207d4a53cb1c1fa7e3b204d7a545ad056861e47a197d930e37f99168454a83d345e73a7b7ac7f657f707fb3cb69475835ef0756521582f13d9ece1a3bf4e3c84da5de0017e160f4e5d7e8972eea50391419c65de01a4226bc22b1ebf3d1b34327b9bba48841dd774d1b9c9973105d5aa9dc437193092d4be2912098db0eea7206c8b82942467e8a50be455a4b"
+
+        },
+        "Amruta_Balli": {
+            "medicinal_qualities": ["antibacterial", "antioxidant", "anti-inflammatory"],
+            "cures": ["skin conditions", "digestive issues"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Tinospora cordifolia",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Amruta_Balli/2417.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T102257Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=170ac6a282abd17ca71008c162243535e0323d208923a1b19288ff0641f7af3fd0b4c6a9c1be26302d7a5e8b4ad8f961af4e7ce36439104dab9eee0878716242d67e782ab26469b06ceb818a2768943eb1a2b6134afaa50e4e9158ffaed4e7c0f64a5c932d1e74ef2d2f18966ea3df6cd8126e94e82b6dbf280861148fc2d8a813182e5ab37ce161a7a61dc8410fbc8151fe8d018ef0b40dac4ec6748c49839158729e7592c49dfbacf1c5d3d7e6db735488f6f090a6cec656d8b1ec92d6b869f50f584aa2855bbb998e454d1c2cf0f8cdf628091e0b243f756cec57f792ab4fc82623b4e01620bdefeb01f361555547d8c623d7aea435a7249f71ee11ba668e"
+        },
+        "Arali": {
+            "medicinal_qualities": ["anti-inflammatory", "antioxidant", "analgesic"],
+            "cures": ["pain relief", "inflammation"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Nerium indicum",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Arali/352.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T102356Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=6e9bfe27604748a4fe8c7c7d8e80b5f8b4094b4d3857c36f09d76f75a43a69d99d1a0fdb915b54a6c231ae617628d09bcf05bcec6dbf52ba7f7c01717b5da2461f612c79e4aac343cf40fd519a88a2fb0e9a758f4c0d2e40a84564324d5877227f70b9267abef2775f7f6fe84ef9fbafae55cb8e18f9983943ec210e7ecc1ffe384a7ad733be7319e49c1e1b1545a66495f1cb7452dc0ba2a767a5807798d7bafb902d4d3e3cfc3c000348190c852d8830ce0c96d36e96bc4ede3b2519010a166586afc423584fc510a1304933f730c4c33e33679748070d3e1f520e92023431c1f7ad19048d72ae5693a26ab431022be3a9d9e4a5cad0b3f8a9d3744b0f5052"
+        },
+        "Ashoka": {
+            "medicinal_qualities": ["uterine tonic", "antioxidant", "anti-inflammatory"],
+            "cures": ["menstrual disorders", "uterine health"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Saraca asoca",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Ashoka/1421.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T102520Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=5c804c01b460837ca72fa7e4d2aebfd745c854a55cb80cf80f850d1600e241d145ab322102d4c8eb0c3e80fe8f6e9ee657fb969452a04cfaa70c41cdc13a9d9a29b9c08758f572bb2b3757f0c8a021cc85ee15ede3df397028d9b5f712d6acb802bf37f5cc4e21ae312aeb9c86c13ff98f4d6b36aae79138abb3a05a9a9d194453baff79d9a02bfa3669ab0908890b0d9cb42d4360f41dc70404a94c747e14112ba942b01452302e35f2ece04efa4e8f478812630c07d475ca1d845488804bdc9a936083c2907856e034848d27feb334364b8ffa4ebc6cee45402ca96b7c8106ef8002a90b25a28d718c6e2f5a3382205707d0e7c0b54fb487f4ce3a6e1fd8a4"
+        },
+        "Ashwagandha": {
+            "medicinal_qualities": ["adaptogen", "antioxidant", "anti-inflammatory"],
+            "cures": ["stress relief", "anxiety", "immune support"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Withania somnifera",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Ashoka/1421.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T102520Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=5c804c01b460837ca72fa7e4d2aebfd745c854a55cb80cf80f850d1600e241d145ab322102d4c8eb0c3e80fe8f6e9ee657fb969452a04cfaa70c41cdc13a9d9a29b9c08758f572bb2b3757f0c8a021cc85ee15ede3df397028d9b5f712d6acb802bf37f5cc4e21ae312aeb9c86c13ff98f4d6b36aae79138abb3a05a9a9d194453baff79d9a02bfa3669ab0908890b0d9cb42d4360f41dc70404a94c747e14112ba942b01452302e35f2ece04efa4e8f478812630c07d475ca1d845488804bdc9a936083c2907856e034848d27feb334364b8ffa4ebc6cee45402ca96b7c8106ef8002a90b25a28d718c6e2f5a3382205707d0e7c0b54fb487f4ce3a6e1fd8a4"
+        },
+        "Avacado": {
+            "medicinal_qualities": ["rich in healthy fats", "antioxidant", "anti-inflammatory"],
+            "cures": ["heart health", "skin health", "eye health"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": "Persea americana",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Avacado/1002.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T102644Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=404c47b0fc21fbe9079a7a291f0c7a653cc11131e27bf6887665a0c52337270bcf4ade6dd8d61d9169169f709dc925330b47aab7660e9c8c6dbc924f7ab501f5b445ef348c7351093373698a27e9ae591d930c820fb8f5f11fb7e471decaffa7011ddd7512d6d82f2953fe532cbee2586bd036e0ee36edc82cee2ada732c9cba58227a512ffaa489e5dd79142b69b9ad0e5b4f299f81143da41c6a86d1f904609f4e9419e82e12ad308d7a0c550215b8524062ff0a2a9ddd3d5d10ce07741f20e13503b43a32faf2224ebb1d9db8bde71887323a115ad6e3c93d6f568f989bc4a70aa20e7dcedc0481572f638e9577a18f48383549ffdb15a9cba1c0b9704ca4"
+        },
+        "Bamboo": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antibacterial"],
+            "cures": ["fever", "digestive issues", "bone health"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Bambusoideae (Bamboo is a generic term for various species)",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Bamboo/245.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T102827Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=7d25c673ec003d6f00d41178c3173771b0f92546a93ef7f1457088deceb882fb7bb09eb8f74911bc774c2cd11deeb93c62ec8abcad4a339e25475cb1bc9dddf9b200fbe47cbfd2085952c567873755e43931ca6b7085340a0fb38db6e17c3156fef867e247ac336b993e6d89d7339258cdfa1eeadae83ef62f87806ef654dffc55d3c5fd7aab42f03702bbf2f22fa564a65c8af4a704bbe033c9c453e6e323d2142079cfbdf40e5acad69f941953b6721cecb2129b955ac5488a5daf22e2beb966ef8921ca600dae7add66f286b6d36a309e3a7b8374d1454c599509353c869794ec7665a97b6233dec5680c75db623b8adb2af486cf7d8ff2d586bbf1c7d7c6"
+        },
+        "Basale": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antimicrobial"],
+            "cures": ["digestive issues", "skin conditions", "blood purification"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Basella alba",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Basale/287.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T102915Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=9ce18677beec753707dc1f55403a1ff05575131a13f1f68bfcc5632326c4d96b8884032a43488d507c35af6319bb70b64715b41cf7e2839574d2ccd7468a66854673147ca5bd5280692253d2b0832c099c67a343d700fd7034a69e018308fee5b9d7729299ab1b26046202974d6665a97890819e1a23c72bf600f7ce2e5d83e97f7058f6b5354a4c6867a0d71fe2ec1ae1efcdfdb8b958cd4d4546b11447749e00b42c5e4e4dc22bbb789b25a98bf3513456ab59b4b17325d707ba3cfb2fa2dd0ddda4506e71f906931a530c486caafda36fcaef23c1b0d93265cdf691f0814bbecd542ed1e4ab2d41184737b0df4f3fde0fa6c8b85391a623ca38ed167f2f65"
+        },
+        "Betel": {
+            "medicinal_qualities": ["antimicrobial", "antioxidant", "anti-inflammatory"],
+            "cures": ["oral health", "digestive issues", "stress relief"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": "Piper betle",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Betel/4118.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T103034Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=59a1322a1e92cd4de1cd7d17a8ccab2df87175135e4fc723f5eb5f1b0db91c27a887525d52985f99dc9df491b5ad1eebc13d945bc80d77668d9f23a99343b0cf875f590b2ef22f5c737fe038d29bb4120bb0fbfad3c19c52f000ca6f0134b63a7ed733fea17e5d27419e8157ec0e542156af9dc479bc5da72d521ada934a1bc574563f96a86ec4226560d035051d7f39515cf0aa1b4a5ced7f46995e6b6f5eb056ac8af8f676f00539c28caa0d946f178e5f75e83e98135206289cde883d13159d8eddf7bfc283766ce5e2074e872aab4acab71b888ac6bb95fd3916b205d4bd8785e4721458e137229f100dd49140a62705198c0f416bfc6aa3ab6804bf4445"
+        },
+        "Betel_Nut": {
+            "medicinal_qualities": ["stimulant", "antioxidant", "anti-inflammatory"],
+            "cures": ["digestive issues", "respiratory problems"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": "Areca catechu",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Betel_Nut/1666.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T103207Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=4b0cfd5bc8043422a6b70692ab8024cc29bf9facc16633fed67121685c6baad2dd78462e031306ff16fffb3c6afb374e953264ec2d3f4b2de466a7038db873bdbe3b3b1cabe28617a43480251ec80302ed056af4d8adfc0ae35ad3235a2544fe05b5bf9738a0d4f328929dfd0e2a0a1fc82c507ec97413453d061217b30b7968e2a5aaed1b2f909075c8ecb6d6dc2905c8c363cd598cf376a5143e107907174ed65248d2264168802bc7f8d3c154dca7c0293bd25605ce03f6bf0ec7b5ac5bb28e00ef18d30c31b7d84e73dd48ebb7e7aa3a535cee2dac8af2080aa2ae5c812c3ff97ff516e2ead30324552f9a9b09ddfab0c450336a9cee226e48dbc57b4a0c"
+        },
+        "Brahmi": {
+            "medicinal_qualities": ["memory enhancer", "adaptogen", "anti-inflammatory"],
+            "cures": ["brain health", "stress relief", "anxiety"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": " Bacopa monnieri",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Brahmi/392.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T103342Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=9e1152a7d142384bb2e518c6f0e2b7996420b473081890c08afe57068f4063f2c7e85ca0419e257713ab97684b2e6d10c832457ecdfadb701633b1f7f364c6c494384b1593e7561e088f7774335812aa5b888133849903924868bfc7ca21552d7eb6ae36d462d33e791a2a796e1962daeacf1981fcb7a5a3f692acfa8ca39c1f8d7a1375a44eedc1db22c2fa5780ab40aefd312af4955701a155cda6c187ebdc70d5bab4213de26c11d9cc7291a9e1fc98b8c5ffba39e996173ae172caeae5deb3ee72f8fc2250b96b20bf3ef7fc381790b7d61d45a96fd260e5a54d531e04cf824d5da4434f9e91f71481e74428d585bfcb6b7f8caccae143598be68d288164"
+        },
+        "Castor": {
+            "medicinal_qualities": ["laxative", "antioxidant", "anti-inflammatory"],
+            "cures": ["constipation", "joint pain"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Ricinus communis",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Castor/367.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104015Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=b2c8d134210ea4472864d4a0bf65c55c3abeca6b51ebfdaff65c9e1847884f85a3f3e061436853d9a92001fc3d1d588d5a777df17c320b6ab6efa34cd552183dd93341fb8eef3fc0144f01dd01ba48754fdeffafd1e22a723ef6d30de9669a80c537589c50e13f22dd7e2d1e03e54f95060c0c6bbfeabc4946b3f372f1dc724cee6ab5f8848266a8eb0a20c53ee4dd0e175e778a6c7870f31bc440ace2f223528fae2bf9269ec4879f0eefca53bca7d27bbdeab17ecdfa600418525676c64b14e5b4d0f0ee84164612ce62032863bc99505d39545a40f40a06b3619bbdf08e62b7540a42e06d96604ab6f2d817a684257e7bd080c575d0e336d4dfe17d6aa7f7"
+        },
+        "Curry_Leaf": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antimicrobial"],
+            "cures": ["digestive issues", "diabetes management", "hair health"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": " Murraya koenigii",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Curry_Leaf/305.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T103639Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=12780082243d6ce17183e2de6481672f743968b770ce089ec78e255895200ddd23f22adf6deb784428f649952f2c5caa4e6ce5c2b46a1b13ca202f14aefbe54c4b8473175b877949df729ff423a030a907aeebbc533953757bd0f4085c62e192d337787e6334c81674eafa5c4415d63ecb9437e9255a9567fb8dd96c3fb2d74a99d8d089e18330f35026983a0109b2bf176964b7510d014ce1433ae071d760b07489fbf509353f3603fa36521e72402600826ffcc58cdb0d4d9c32f177c35d1d90e79051ba21695008da4c889cdcaaba682963f3a6a4f53ff15030f2271153f303690d20b07cc85ec0a63376750c605a377f85826d4574da138eedf060c214ba"
+        },
+        "Doddapatre": {
+            "medicinal_qualities": ["anti-inflammatory", "antioxidant", "anti-allergic"],
+            "cures": ["respiratory issues", "digestive issues", "skin conditions"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Plectranthus amboinicus",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Doddapatre/463.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T103718Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=366d9705b3fdf5bfd6c90bb780e7bce72fc0123f9b244bbed8b48a1829c1829e83526a3de82fdd7acff89e69045eb70b518dfb6f84f1b0cac82470c08e8dcce63c32fd77720694619b0535d399d3d75a4a6793b8666e82474a5913a75723336141c37c49e32921576fbd2c9d8a635bc733961d6762c17881cc491fbd033c3f5b2192e95cbc6763d78c04f7323695afa15386fbaaddd4a5904aa4f9aae8c21150515fac3cc45a383ac590226b0f48612cc1336c72dbdfcb0d5110080463ba97d65d3d0d7cef4da0a7ec008b2db97c30eb080dc33935b47270a7bdb534bfa5289df1a000db971cd7dc63b75847d8c8377de50e5cb63df8cc1d51cb7cdf42522839"
+        },
+        "Ekka": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antibacterial"],
+            "cures": ["fever", "digestive issues", "immune support"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Tinospora cordifolia (also known as Amruta_Balli)",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Ekka/158.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104127Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=95e4983d6318575f00ceeef79a7959002b65ece468aaca34f881d04041669b265837dcea7f42b02e91a2f6bb06feb624c291c5ad4ccc15b83e3e03b1974fb9692be11b241afc006b3723434ee1a8bcc8f19e156f17cb51e56cfae871cbe09b1dd61115969103e25c8d5a4f85f5a51f4155916bc6974a22c01cb73ee278a6294dc020f8c4a9b93a92104b1e369eccb43d0b8f4d1312b025c5a37adfeb8e843a411190534859e6a51967f92fd1b2da1557def44fd86349937576165e283eb38d818bf8d3170ad419ec43293ad46e80c9a4383d67ccb4ec4d99a37746649052df430cc87ee8da2b71c2eac373ce825a672ca813f1d869b1e4d049b2d3c08c1cecae"
+        },
+   
+
+        "Ganike": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antimicrobial"],
+            "cures": ["digestive issues", "fever", "respiratory problems"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Vitex negundo",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Ganike/275.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104259Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=7afb422a03afa9065b7086a47ba896a031f4c27739aaf6432a4a122d521438ff0779b243e8abc4e102e4afb374fa0628a3b510d0f184e32034195ab97e8b6af7dc61a00bbc85adf32a69a6cb379cb9ff653fbf4d2d02b8bba6c6aaab03aac70dda073abd891766de4ac42eef3dfcabb94c30e5f322699a6952ce95904d397487502956a9419b9af50c0ecaa8fc7285d74c920d1b1efd59aa48f1960fb6cdc24bc9a190212e8e3141ed20cfc4e4d9bbaf1ed5475046bde1ae5ef9797d069ecc8d81ecd32e518a0821394e433d90b813ecffabcafb764922e40bf10038d70bd9d4762d503e635b3d478ddf9186e4a77141982eccdcf6bf035f93c9943191f1f491"
+        },
+        "Gauva": {
+            "medicinal_qualities": ["rich in Vitamin C", "antioxidant", "anti-inflammatory"],
+            "cures": ["boosts immunity", "improves digestion", "heart health"],
+            "recommended_consumption": "1-2 fruits daily or as advised by a healthcare professional",
+            "bt": "Psidium guajava",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Gauva/173.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104339Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=8ef790e94842413740ec277ac972f05e62ed8dea4776704e44d81303d7ff071d3c09cb753efd20535198a82b093302c6e21441f3794013780ca71c9bd8f6d87df4c3a1dca746f7a35f73cb22ef3e7c5bee5cbfe36108538e541f39e457218f943f2a1dd3428febce27d35d539ecd67bdf1bdc2bb10cfcc085671e29de380c1b2ede6af683fe796bfd7dc98a9440591fec1444363ba3e5c56e8fe325347f3221ebecc4283d0fb9a6104d3bad3dbd1d5646f9281cf1ec866c817f70ae8c23e483ee0f56844321ba8d90e6f4621f84be6b321b76846c34264537afd7d7d81a4a3e12f4c6c35a83dae47b8e87b28a8aa0b4e4335bfc7c50a6cb926a4105046a32e42"
+        },
+        "Geranium": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antibacterial"],
+            "cures": ["skin health", "stress relief", "respiratory issues"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Pelargonium graveolens",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Geranium/10.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104455Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=22a04ef4f9f4f52eb33242ba3871a8f1d740c9f3895e6ed0e0ffa61d8e73c893ed6840e4ae7a0c20c16faae3cf888abec24fb513bd801e4d851e251f71474ea6a4a1a22ea34d4cfa54efbbcc5a8900a508fa1ae33b13adc2df6d0028eea1eb825b47e32b833ef13f595adfe25d72695f114ac1ffae68ba97d59ab4a0757a76e69313f6268565e74ed816d5177c73516432f94517e33a3b840e25c4c81c3c7a7d07d8ed0639b4a4d3f2304bc4a57985052eeb9cda5aada7877405034d388aabfd8e07e834e826c62ea5bd3cf28115e8a5e1e0ff77d8b465c4811077e8a3774e863b5935ea2949161383e3a34711f029079727a34c70b512e3d9b6f62690ef283e"
+        },
+        "Henna": {
+            "medicinal_qualities": ["antimicrobial", "antioxidant", "anti-inflammatory"],
+            "cures": ["hair health", "skin conditions"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Lawsonia inermis",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Henna/390.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104539Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=7a8fd1c69d23b0fc8540870b62e6e2e2730c3f35c409caf85e144af075a72892b7a93fa8112a59c292e702d0b7aed785c72f5067ed85bd8d565a1b25ed67113a1b4760624a313675b8e3c0b19bf86d86828c928983672ba7237f181a15c7e9394f55645fc8cac29b1bb0383b859c20c56e559624cc2634450fcd03c8a564e3a7e56ef41b594b510b42b9fb8b4d376fc624ae6f42b5f9d7a8bfb1d07d55e3c9dd5e5bfc9a47d6b5cbe5dd99fbff273267de07e671c3157bf16ff877af636a0bcd1175db870ebd5fb153ef224fc79495d035a41e0e42d850aa3c5350bf23b344711404c1e6c3de8ddf014405004d81823396849905d56813606e9ffc473fb52f6e"
+        },
+        "Hibiscus": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "diuretic"],
+            "cures": ["blood pressure regulation", "hair health", "digestive health"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Hibiscus rosa-sinensis",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Hibiscus/1171.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104628Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=5257e7be09ee6a88c182c27d4d65b14808831008799956d1de12aaa94a99c6d83f2d5b52598f0c4fcf3314dd4325606c2dd8c79bee1bad7e1e36daefe11e5d7d704259a2401ec49aab2ff3aa35e51588499f3e28943a73f281fac31478af769cfe7856dbce290a63ca333350fcc7719d49d09da349ff69c57657d154d803636a5a7a07718d3d9a1904632d8c05090c82230e4d9b50d73ca8b2509c6d0a66e014b6f04384bffbd1f626f8d2111a9b9b14e6614d0fb9d71539313000dd9081cbcb62da11eeb44fa99cb18a862af5fa242f0267c80725b9688caa3d84d690616c90b99460e4c5d5232b730de69da2a4a2ade343097f8941f69053d7c8e71d10dadd"
+        },
+        "Honge": {
+            "medicinal_qualities": ["anti-inflammatory", "antioxidant", "antibacterial"],
+            "cures": ["skin conditions", "digestive issues", "immune support"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Pongamia pinnata",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Honge/222.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104712Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=0c839d345a569d8c34cd4be0754db77d8ee685e29135c5c36e50c628562bfb77e77deeb73abe9f9cf9c19d29f7672c60f3725b06e67879ff9ea222cc72074c5625368b5b367480b1b791730990dcb902da2108e18ace84209059e0b76677214b1ebceec3da61a596abc7f85e734ba76bc5fa87bf88d1b7745597968e4fb18b51712685592c5d36ca4c3074d320ffaa97242a34d983b0e93db6e7b868738804be3496c358331368b5d81fa6e459689a851eb01dd67f13a4016371dc3ef627110b3f93f62a7cab9414c59d7acb32dc45d102113ab76a46cbe6ce2780c3da2a8dd5c4559b5fa15d3c5a303e6fd2efef5c9be733e0049409b8fad4066c14a6b8d4da"
+        },
+        "Insulin": {
+            "medicinal_qualities": ["blood sugar regulator", "anti-inflammatory", "antioxidant"],
+            "cures": ["diabetes management", "metabolic health"],
+            "recommended_consumption": "As prescribed by a healthcare professional",
+            "bt": "Cissus quadrangularis (Assuming it refers to the plant's insulin-like properties)",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Insulin/1017.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104800Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=86025b38a865e775da9eff6dbf0e8f2d2fc0035f2f4eab610c4354fafaf6d9f69928fd06951f3281b57c20bd580e3bdc19eba4df9712c6354a0cce15ff087fe095f7af38a18f1c9b56d7562a3d57467f62dd4f45a962a3150444f61ad28e0e395615803a72e50edbf9cd91996ec92c74d5c144af5bd177021f5796ec5b531c0ef4607003b77471e28bdf64cfedd9ffcbfaa7c1caca0478532341ea4246da9249a999bfa66bde04f0a435b7e1797b05c0f60c92b17d7773edf0d0f2fba148393f208b66df9315525522c85b1bb93d8ccc0fee3050ac94d413d5cb043b5771f26b5a5adc689b5b974b8e773fb34fe7974601245e7b8c87241764593d2b4ed1cb1d"
+        },
+        "Jasmine": {
+            "medicinal_qualities": ["antidepressant", "antiseptic", "antispasmodic"],
+            "cures": ["stress relief", "anxiety", "skin health"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Jasminum",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Jasmine/253.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104854Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=b85cd8854a9917d26e772f081cbfb5adb1dfd667757871d72040a238cf30f38537403c4afab9e61d0bd437dcaf9c0612a0578ff8e2719d60f464fa43946a4b09c90f224bcb698b292344a9435ca9b755d9139c733c9e9b42047db7c4dd62323621b857d3a20e294e9e8b4170fad8c09de8a873a412545bc9e10368efee3c53bbe06054062c390cc0fafe19ad337a2cf23d3e79c577885c17a1cea40ba5b1a2cece3b4da7b4249438b375c6c6eff5c1b505dbe69cb90085cecda85f070d4c02a0057fbaa57da71509a7465f7208b3809f54342c3927a607bbe60ab50c2203b802aff1bc255f668d1e6c3bc8cc932fd1a20550018c74037a3ec897bcd9e73f7ff8"
+        },
+        "Lemon": {
+            "medicinal_qualities": ["rich in Vitamin C", "antioxidant", "alkalizing"],
+            "cures": ["boosts immunity", "digestive health", "detoxification"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": "Citrus limon",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Lemon/434.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T104955Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=6bc34e19d5d0f0ce418b710b348ad2f1a2e191c2f9d1f1f32c36cb7188916db68ff0ab6d31160161ab1bb4ec739c6dfc1ad40b9e3f79d8643e2be1e19b14830816934a67e05b85385ec4051e68686ee4763a9b4f0b9e8340e356ef61f66e6d1d70f6cbbc327fd4adae6b938cf5d3997a67de1e78967fe2d853dd52bae49de03b5a601eae65da4fe343a965864618e22f8dc495f81c461a033c35c26ab56b4909f5f07020c7f9c718c6c21bd4f7bbafa4c924628ef10b260aa7da8d4ec04f54c8bd6e4aa9ddbff11f91b594ac086d65784ca83b1360ea26bf1158585a68166e67090ac98e030a1b6b78e2e24ec918eac3ceec438731af02c8bffc6b6cf51d59ed"
+        },
+        "Lemon_grass": {
+            "medicinal_qualities": ["antibacterial", "antifungal", "antioxidant"],
+            "cures": ["digestive issues", "stress relief", "immune support"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Cymbopogon citratus",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Lemon_grass/5472.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T105055Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=65f5a96caa4c3612d5e2ea543bbf41a96708091536cc186a4192ba93dde50fa082f66ba0391a535eada167d83b305078c066c71ee2542a3ed4b91dc766e8b0eda0b80cdaafc1d03b3c9e9177006cc8094cbc507fdfa8ebed2937825a8786306827d5c0c1f32bd7e67ee0cdc6559719b6e62eb10df5700aecfa30187f91e7e311a96fcce14f2fe4842f97b3ec647bf0ae5fcb9fd6098c4f28bc55464ad8fd3fd29cd095e2c39ead1fb12afce9d834a623db3462827bcf6392526884e1b5875988dfc7ad186898317161aa44e3a11266f295bbd875aa5f983bd96fb5ccd0e6684d2c4d01506e8b72cd1b6f45ce28321dcdbdc8dce91c464cc1e6b391d356ba0e99"
+        },
+        "Mango": {
+            "medicinal_qualities": ["rich in Vitamin A", "antioxidant", "anti-inflammatory"],
+            "cures": ["skin health", "immune support", "digestive health"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": "Mangifera indica",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Mango/419.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T105253Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=9a225b3312f6aa939e3697ffa556e89698c5e894abaf20fde9b7881a12d8c8364b55c5b720f83cc6c775cfe91914eb58ba297d1211a92346605a9f7c8fd1b75a0bb97065fe1df8da38c8c6793a113de1433f32884781a8487d7c120fdd1a647b42a4a35872c4344c49564d0695e879ec03f1c61e324d334c9ab12838b33395abf5073f97be772f05b7137ed7be6d70e30048e3dde1f5bd39e4fe7669ee000b3e28cfcdff642ecb230c07f16622d3cd0a11e77e4643fea4b0ff26d65a5b807f1aa075a4c122fa4ba341c9b579369a06ae3994e6b2ab31c01a6a2023fb39ff8c5b4650d449287462042a3106df8fc1be5832077a80b3bb438078ebe0dad35de94f"
+        },
+        "Mint": {
+            "medicinal_qualities": ["digestive aid", "antioxidant", "anti-inflammatory"],
+            "cures": ["digestive issues", "bad breath", "headaches"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": "Mentha",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Nagadali/2287.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T105502Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=962b9808069d3bb0fa87580a1baa43e242e6ac0ad7ab53ceb38052171a04c722a5b4d4e629c7f42a57c3346cb751a7aac8521507e361f5743ad0b80c5dc03b9121473584063bde950b7e0650388ccf7a9a24fb438613c67837f2392da80015c54991a1b790f7d823a414fd87d070bdc8133cd1e227ba2b78799e26ba18cdce00995cb5d809891be50ddfb4ebaef2db528f7ffe430689a889e5ff775d27e407338ae1bbae28f2c3488e7310462b973a8f7b06dc011ffc9d26a6faff846868d01122375d40db402c856d1f92c8e5677e07234b125b686af5d3b6c57a98a8ed9e727a19a9854b8263bc02089b894a531513d2753f06b7de0c1000dd386d381a9316"
+        },
+        "Nagadali": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antibacterial"],
+            "cures": ["fever", "digestive issues", "immune support"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Mesua ferrea",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Nagadali/2287.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T105502Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=962b9808069d3bb0fa87580a1baa43e242e6ac0ad7ab53ceb38052171a04c722a5b4d4e629c7f42a57c3346cb751a7aac8521507e361f5743ad0b80c5dc03b9121473584063bde950b7e0650388ccf7a9a24fb438613c67837f2392da80015c54991a1b790f7d823a414fd87d070bdc8133cd1e227ba2b78799e26ba18cdce00995cb5d809891be50ddfb4ebaef2db528f7ffe430689a889e5ff775d27e407338ae1bbae28f2c3488e7310462b973a8f7b06dc011ffc9d26a6faff846868d01122375d40db402c856d1f92c8e5677e07234b125b686af5d3b6c57a98a8ed9e727a19a9854b8263bc02089b894a531513d2753f06b7de0c1000dd386d381a9316"
+        },
+        "Neem": {
+            "medicinal_qualities": ["antimicrobial", "antioxidant", "anti-inflammatory"],
+            "cures": ["skin health", "oral health", "immune support"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Azadirachta indica",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Neem/1794.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T105625Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=91956b637cd70f800d25eb5056922fc6ac6e93e27c5fb6da00ce83f46e15ff7bed9ec1797b6dc07fcd220bc806ab454eb45317c9acd07507d970225401083b44e1dc45f9b41b0ec702da9166f9ab11e647cc53273ec2662888ebec4e40d1e82d431c3e45ca8bc13bf5c9c03fb38dd985828ade9ce6d262e5a20ee247331c1dd7c95012a8f6d2f08b614e53dc9f5a0c4431dda7c4339cceaa507a55cc2e67edd7b50f87d103d34f6e982ceb137b0f073ba673958d0b45a50e0097d2216b62f15361f2a208086eea86a8f1a5ed276cc0dc8910736a1f5ab6f11148965ac4b96d70c4f0e6dc652173246387e255f1480cca7d8e1e3863a15bc9c059fa12342f13cf"
+        },
+        "Nithyapushpa": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antimicrobial"],
+            "cures": ["digestive issues", "stress relief", "immune support"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Vitex negundo (also known as Ganike)",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Nithyapushpa/202.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T105731Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=39da7cb22d72d86316f3dde797e59604236b2b5eb3e4a8c6c5ca7273bea3782bb7338999012276d5d091ddc526eb668ce3475e603950717f9759ec6ba5245f45c74fab2cf3099a8b57ed5c874e25ffa6d38eb8333fba6f615b5cd258d1b82408ef8a58e8dae1752b449a9b87bb1a4626c249eacace8664bfced0f3b8a83a231f5de55b492ba6f298326e024b326fddda94742ec50e471974561926f99513764061ce78d70a7c81421cd54ba294a75837418206cd466ec446247ac46ccb0a5832ffa0f2d2171161e07bb613b2556ec01a5afccdd7eaf758bb8612aa346588f5529cc9dab6e1533016b3434e4f7365e3eddd2983fe8e36dac6d2a5383dad1e03b9"
+        },
+        "Nooni": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antibacterial"],
+            "cures": ["fever", "digestive issues", "immune support"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Tinospora cordifolia (also known as Amruta_Balli or Ekka)",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Nooni/185.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T105814Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=790552aa63b0cec5692877115a38edcb1d33680b67a077d121884d7fb6f50156d95ccb44859e42c0d342f7a1ce3e6038bef3b9630d835ef6de911d005a70713138c95903e290dcb791c92597ffcf92cf553a212cafeed11fc398e42f23849ddb19a5dd58fc6c5a67dd7deef8fc9e7c153d5c63b19cc40dae5ec5d14a7ae6bee2bf38384995e3f444af34a5cbefd22e5eb3a4ecee58599d3b2e34cb92ec661c24ba7c14dc544333e8e59574e23ac44a93888364e3f93287cd8ebe79f2be47e6e1ef012f6a833e8fe62517664b27f10163d595e652b19013b5e7601335d0e5fbe39926a9021f1df05e117377d1a976533e2b8f035a59407825e37145a986603316"
+        },
+        "Pappaya": {
+            "medicinal_qualities": ["rich in Vitamin C", "antioxidant", "digestive aid"],
+            "cures": ["digestive issues", "skin health", "immune support"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": "Carica papaya",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Pappaya/108.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T105910Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=a21baa3cc3f06541f4b49526d0b5d9846b674cedecf2bf9ef7d13dffba97aea9c369aeeb648955191ecac11744dd45d7a1167be91819ea28ecb5f76cbdbf130194d018f7a0e847702d245574b06e34da174f9449155f38b74fe890c33dd3a746af53ccf8f82d810a2877314a1de4d01bc57a09a2c737780805a9025e39dbbbce242ad5ded2769f964937a9bb26e2ac2afec134a85ab4e08ae95f6bf3e8d35c14e548e223ec67a99892d47181c4eca6eca22bf5192ec5e10eee234f19cc3b28812c557054d89377337d448f6d7cafc4fc9308c31c16adfe5230214c6b3020edb3cb3970c328aa7ee326dc2489005079736db9acf73ed6d8ae82048bb45264c49f"
+        },
+        "Pepper": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "analgesic"],
+            "cures": ["digestive issues", "pain relief", "respiratory issues"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": "Piper nigrum",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Pepper/443.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T105951Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=57b4a336ad9b77c3c405cc809fbf03c806900521cc23215029d18f5ca7917f13a013c9baf67255e042d3fd4d0269554b4ba44268deefc0d01c77271df2a1e82a2b226c1f78873dbd5cf8373fae5c8a624b6dc0f0fbabedc997392a35fdaccc7c99ed958ae04a5bf972587f1aad16851fe674b74d89d6fb5ae19e6ea44e70c63482938e0fd1c27af90f9a1912ef7f6b780be3952f8ab12a0a31b7c0e620763fde3b964a0ba5af2caf7e0195e19113ecb317e37e1ec69e3782076626468dff1760e2394bd53b71652301dacb536be59d199d4f8b07c8a9768096594ac234d47ea23c4f06be0aecd306d7eee9a49d2f2f903b1538f7927f048923246523672089b8"
+        },
+        "Pomegranate": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antimicrobial"],
+            "cures": ["heart health", "blood pressure regulation", "skin health"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": "Punica granatum",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Pomegranate/218.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T110051Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=03ec39ff70263087d81e32faed3cb51eda54aef1a544756d7133696bcecf28da4a66fe7636fe6cf7babb31cd106046cde2109f3f723fe1f31a453755a2a066e1aaef767b211b48d403738bd5aefcddf576c0a4029425b5db5b38f4f732eaa2e6562c04baa653109655a7817cccdbdac4c2b985be71abfa93c09e1f25e1b46b408db8698e9a378f38c385a0c9d645c293fdbe0bd723c8bd4aca19b25337ff708bc98f730aa09b5289d0fd92dac7300a56e4f216092ab5faeff840aef6f3dc1ffcab95f2002950c3d40b611c3b11bfce3d4894e7889dd92916237a50eb419a86312299a78c9a43b9f10e68413b79b2e113f84e9d2ca4ac974a018408b6bbdd73ff"
+        },
+        "Raktachandini": {
+            "medicinal_qualities": ["blood purifier", "anti-inflammatory", "antioxidant"],
+            "cures": ["skin conditions", "digestive issues", "blood purification"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Rubia cordifolia",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Raktachandini/508.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T110137Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=6dc96dced3f98e6d816350fb81d1025d4cde5f28e1af4e271a67515f358b46500aa31f9399732aae668be071c0e8dcff671b72b2fdcce87569e043c89925098ddfb52acb303e93e4ec70405bdbd904f4cea357d6617d2a5a32099dac641454a944c63a65da18d9d7250531009c5ab98a125975d0c3bf70eb168516e7c9445a5eeb05bf368349f76064cdc8f9b0fd3047674e46e69bdde4036ff6303a85dce1360217ebcc90d967f6af9f0824f4cd7c29e296ca41f1e653895bc0c8822e76c5baeab98c12d45cff83d98bfd75751637958d2c5dcffeb01dc22d9b538b39a01992875fb92483819394bf910e4e572c436e45b420cf880227e169348817c1637f11"
+        },
+        "Rose": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antidepressant"],
+            "cures": ["stress relief", "skin health", "respiratory health"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Rosa",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Rose/1903.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T110227Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=77319e93950f214f4ba3616fc3a526ebb63e1b155592d1f876f288dd6a61406d28b914374090ee46b12ff54c36314eff06d13671aae1fd6de67c7bc73ce0d8b281c6e679664c985aef2c5c95454aacbc77039a7482776c160f5711abb5777571be25ce383b59c67d65fd3a4561cbfe427dcda6d8330fb1e71bf6668e5cc1ebf6bbeeab975d6c5854778d02a63ff69dd348982516b338666edced9e2f3fa5403bbd6f126afaa74b7bad25ac94a7b778d9208bbf1a04976f0f5d12761f78ad49a9f38105a3b0a594e1eb30335e0929d982b0b65d97df87577e44a1acbde7b69d941a46bd3880cf218ace1dc2607315cbba06c4fd79e8ae4496eefd0d904f05cfb5"
+        },
+        "Sapota": {
+            "medicinal_qualities": ["rich in dietary fiber", "antioxidant", "anti-inflammatory"],
+            "cures": ["digestive health", "heart health", "bone health"],
+            "recommended_consumption": "In moderation as part of a balanced diet",
+            "bt": "Manilkara zapota",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Sapota/1552.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T110309Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=2dbcdfec8bf9e0978a6fea2f7668c186dc4a96b5b58489158b1f9c6cc6a5495a2d2dc8d47e303b8ed6478f7e93981c54b54555985e7bc09c18b1efdde083073bdde6cf3e831a26bef9174357787493f9215b2998fd78854593097f386f8ec98f608264bf5a159e64265f19ad8554d74451ce5e82ee46c75b9df6a07e0f15746313e104e5b234b9856a6df8ebf546c9886d2cbe0e0e28238669f11e7a112ecc9ca861374f1c4c263000afa009c4d28b5792e0ed4fe71059f54bd240cfeb001ea2d8e7f12000c546847e60402abf47b997013ca9b3136b32ecd091a7de22705326d62eed2f614beb120297af133ee73b8b0f3bbd9bf50e4169f9885feee34d6594"
+        },
+        "Tulasi": {
+            "medicinal_qualities": ["immunomodulatory", "antioxidant", "antimicrobial"],
+            "cures": ["cough and cold", "respiratory issues", "stress relief"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Ocimum tenuiflorum (also known as Holy Basil)",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Tulasi/269.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T110701Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=5494cd728b4719438526ffd1e8c33e36cef4780a61f4ffbe5b106e91ce3e8bafbdd6473db057d7c1d2cd7a5a1442318eb263fc98db9e7294381f7fe08692a53e67189cf60a29923ae3ce3fd9a4f1c0d8044d90e4df06e6d10df7c067c08464c298b89e8d2b76f369b66a236a956084f5a40e1310699d2e4a2a28bfa37248e0788a1245dbf1ed82c0d9822886dc40f3ce25f87004847114b2d89d4aa07cde9c595db2c0f7846f80cf5372de5a373f8982465d4746283db6b052b02c742fcfc4ba8ed08c1529a3967ab936229962fdb399191aa349a3967ca4be68a8e16cdd2a84ffc785b981bc54995591cc74fa7261898eac8d391cf7024544101eaa396f82d0"
+        },
+        "Wood_sorel": {
+            "medicinal_qualities": ["antioxidant", "anti-inflammatory", "antimicrobial"],
+            "cures": ["digestive issues", "skin conditions", "immune support"],
+            "recommended_consumption": "Consult a healthcare professional for dosage",
+            "bt": "Oxalis acetosella",
+            "img_address": "https://storage.googleapis.com/kagglesdsdata/datasets/3701557/6417582/Indian%20Medicinal%20Leaves%20Image%20Datasets/Medicinal%20plant%20dataset/Wood_sorel/407.jpg?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=databundle-worker-v2%40kaggle-161607.iam.gserviceaccount.com%2F20240328%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20240328T110731Z&X-Goog-Expires=345600&X-Goog-SignedHeaders=host&X-Goog-Signature=77a4305226c1889270716fd32c9086480cd6f851689c7c8e7301c985f63d44257ce1deb2713ee60a0bb0a8a91f78f28466e9b179d4a13dbe6f9b82e40a62a765bfde42c04c21910794d801bd28ccd2a1dfc188ea62f8d356cf452adc9ed0f42327e630f60641381f07f8f42f75a1ecb654c8fc782c8d77f7090b4b75f9b112545f3107c346066945604a7e0e260651947eff8a717d76baf902245273939b569d23d392cbf6480c3ad8b60f61caa8ea79a1e097dc6bd5b8ee5b44a223707c40821e643cc34c4426ec7cacec826d4a9e19fc12d186842b21b2b15d35628fc2618b1faf9fbdb67da2c41efeaeb57cb22500d7510e831269c4e93d64a607aefabe07"
+        }
+    }
+    
+    

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}
+User Input Form
+{% endblock %}
+
+{% block style %}
+<style>
+    /* Add your CSS styles here */
+    h1 {
+        color: blue;
+    }
+    form {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    input[type="file"] {
+        margin-right: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+{% endblock %}
+
+{% block index %}
+{% endblock %}
+
+{% block content %}
+<center>
+<div style="text-align: center;">
+    <img src="https://plantlane.com/cdn/shop/articles/bottles-homeopathic-globules-thu_1100x.jpg?v=1688375982" alt="" width="90%" height="300px">
+<br><br><br>
+    <h1>Enter Plant Name</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="plant_name_text">Enter Plant name</label>
+        <input type="text" id="plant_name_text" name="plant_name_text">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</center>
+{% endblock %}

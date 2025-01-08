@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+{% endblock %}
+
+{% block style %}
+<style>
+    /* Add your CSS styles here */
+    h1 {
+        color: blue;
+    }
+    p {
+        font-size: 18px;
+    }
+    ul {
+        list-style-type: none;
+    }
+    li {
+        margin-bottom: 5px;
+    }
+</style>
+{% endblock %}
+
+{% block index %}
+{% endblock %}
+
+{% block content %}
+<div style="text-align: center;">
+    <!-- <img src="https://plantlane.com/cdn/shop/articles/bottles-homeopathic-globules-thu_1100x.jpg?v=1688375982" alt="" width="25%" height="50%" style="margin-left: 38%;"> -->
+    <br>
+    <h1>Plant Prediction Result</h1>
+    <br>
+    <center><img src="{% static 'Images_leaf\uploaded_image.jpg' %}" alt="Input Image" width="250px" height="250px" ></center>
+
+    <p><strong>Predicted Class:</strong> {{ response_data.predicted_class }}</p>
+
+    {% if response_data.medicinal_qualities %}
+    <br>
+    <h1>Medicinal Qualities:</h1>
+    <ul>
+        {% for quality in response_data.medicinal_qualities %}
+        <li>{{ quality }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No medicinal information available for this plant.</p>
+    {% endif %}
+    {% if bt %}
+    <h2>Botanical Name:</h2>
+    <ul>
+        <li>{{ bt }}</li>
+    </ul>
+    {% endif %}
+    {% if response_data.cures %}
+    <br>
+    <h1>Cures:</h1>
+    <ul>
+        {% for cure in response_data.cures %}
+        <li>{{ cure }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No information available about the cures provided by this plant.</p>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block script %}
+{% endblock %}

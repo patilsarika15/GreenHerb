@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block style %}
+<style>
+    /* Add your CSS styles here */
+    h1 {
+        color: blue;
+    }
+    form {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    input[type="file"] {
+        margin-right: 10px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: green;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+{% endblock %}
+
+{% block index %}
+{% endblock %}
+
+{% block content %}
+<center>
+<img src="https://plantlane.com/cdn/shop/articles/bottles-homeopathic-globules-thu_1100x.jpg?v=1688375982" alt="" width="90%" height="300px">
+<br><br><br>
+<div style="text-align: center;"><br>
+    <h1 style="font-size: 2em;">Upload an Image</h1>
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image">
+        <button type="submit">Upload</button>
+    </form>
+</div>
+</center>
+{% endblock %}

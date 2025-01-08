@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block style %}
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            transition: 0.5s;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+        }
+        img{
+            width: 330px;
+            padding: 10px;
+            border-radius: 7%;
+            margin-top: 100px;
+        }
+        h1{
+            font-size: 70px;
+            padding-top: 20px;
+            font-family: 'Fredoka One', cursive;
+        }
+        p{
+            line-height: 30px;
+            font-size: 20px;
+            font-family: sans-serif;
+            color: #444;
+            padding-top: 20px;
+        }
+
+        .about-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about-img img {
+            margin-top: 0%;
+            margin-left: 22%;
+            max-width: 100%; /* Make sure the image doesn't exceed its container */
+        }
+
+        .about-text {
+            max-width: 60%; /* Adjust the width of the text container as needed */
+            margin-right: 7%;
+        }
+
+</style>
+{% endblock %}
+
+{% block index %}
+{% endblock %}
+
+{% block content %}
+<section class="about">
+    <h1 style="text-align: center;">About</h1>
+    <p style="font-weight: bold;justify-content: left " >
+      GreenHerb
+      </p>
+      <hr>
+      <div class="about-info">        <div class="about-img">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4kU0kb02YtjwNwcbH91cTw-6E1kMIBSKWZGy4vKb5stWsQbaYifziz6E0xkkA-yqJBwc&usqp=CAU" alt="GeeksforGeeks">
+        </div>
+        <div class="about-text">
+            
+            <p>
+                
+                Plant species identification is a challenging task that has a key role in effectively studying 
+                biodiversity and investigating unknown species. The manual identification of plant species is a 
+                time-consuming process and requires a lot of expertise in the field. Automated identification systems based
+                 on computer vision and machine learning techniques provide an alternative and assistive approach for this task. 
+                 These systems are useful, but their accuracy varies due to the diversity of the species
+                
+            </p>
+        </div>
+    </div>
+    
+    </div>
+</section>
+      <!-- <button class="btn"style="margin-left: 20%;">hi@finalyearproject.com</button>
+      <button class="btn"style="margin-left: 18%;">enquire@project2024.in</button> -->
+      <!-- <button class="btn2" style="margin-left: 18%;">enquire@project2024.in</button> -->
+{% endblock %}
+{% block footer %}
+{% endblock %}
